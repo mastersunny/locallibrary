@@ -1,6 +1,11 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
+    {% block topbar %}
+        {{ block.super }}
+    {% endblock %}
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
   <h1>Title: {{ book.title }}</h1>
 
   <p><strong>Author:</strong> <a href="">{{ book.author }}</a></p> <!-- author detail link not yet defined -->
@@ -24,4 +29,5 @@
       <p class="text-muted"><strong>Id:</strong> {{ copy.id }}</p>
     {% endfor %}
   </div>
+    </div>
 {% endblock %}
